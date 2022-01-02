@@ -7,7 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 
 public class HandleTable
+
 {
+    /*
+    Ajinath khedkar is user
+     */
     public static void main(String[] args) throws InterruptedException
     {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\admin\\Downloads\\chromedriver.exe");
