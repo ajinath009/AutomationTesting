@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class HandleTable
 
@@ -17,6 +18,7 @@ public class HandleTable
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\admin\\Downloads\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
 
         driver.get("file:///C:/Users/admin/AppData/Local/Temp/Rar$EXa13900.30741/Offline%20Website/index.html");
 
@@ -26,10 +28,10 @@ public class HandleTable
         Pass.sendKeys("123456");
         WebElement submit = driver.findElement(By.className("btn"));
         submit.click();
-        Thread.sleep(5000);
+
         WebElement User = driver.findElement(By.xpath("//*[@id=\"Users\"]/a"));
         User.click();
-
+          driver.manage().timeouts().implicitlyWait(5000,TimeUnit.MILLISECONDS);
         WebElement table= driver.findElement(By.className("table"));
 
         List<WebElement> rows = table.findElements(By.tagName("tr"));
@@ -41,7 +43,11 @@ public class HandleTable
                 System.out.println(col.getText());
             }
             System.out.println("............................");
+
+            System.out.println("test run successfully.....");
+
         }
+        driver.close();
 
 
     }
