@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/admin/IdeaProjects/Automationtesting/src/com/GroupTest">
+        <classes>
+            <class name="com.GroupTest.CarLoan">
+                <methods>
+                    <include name="WebLoginCL"/>
+                    <include name="MobileLoginCL"/>
+                </methods>
+            </class>
+            <class name="com.GroupTest.HomeLoan">
+                <methods>
+                    <include name="WebLoginHL"/>
+                    <include name="APILoginHL"/>
+                </methods>
+            </class>
+            <class name="com.GroupTest.PersonalLoan">
+                <methods>
+                    <include name="MobileLoginPL"/>
+                    <include name="APILoginPL"/>
+                    <include name="Demo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
